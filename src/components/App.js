@@ -15,7 +15,7 @@ const App = () => {
     setEmailVal("");
     setPassVal("");
     if(email.length === 0){
-      EmailInput.current.focus();
+      emailInput.current.focus();
     }else if(pass.length ===0){
       passInput.current.focus();
     }else{
@@ -32,7 +32,7 @@ const App = () => {
       Email
       <input id="inputEmail" type="text" value={email} ref={emailInput} onChange={(e)=> setEmail(e.target.value)}/><br required/>
       Password
-      <input id="inputPassword" type="text" value={pass} ref={passInput} onChange={(e)=>setPass(e.target.value)}/><br/>
+      <input id="inputPassword" type="text" value={pass} ref={passInput} onChange={(e)=> setPass(e.target.value)}/><br/>
       <button id="submitButton" onClick={()=> handleSubmitBtn()}>Submit</button><br/>
       <p id="emailText">Your Email : {emailVal}</p>
       <p id ="passwordText">Your Password : {passVal}</p>
